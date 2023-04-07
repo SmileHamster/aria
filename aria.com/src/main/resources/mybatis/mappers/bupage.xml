@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.bupage">
+	<insert id="addStore" parameterType="java.util.HashMap">
+		INSERT INTO lackstoredb(ls_bu_id,ls_storeName,ls_phone,ls_address_road,ls_address_jibun)
+		 VALUES('${bu_id}',
+		 (SELECT lsp_storeName FROM lackstorepublicdb WHERE lsp_storeName = '${mrhstNm}'),
+		 (SELECT lsp_phoneNumber FROM lackstorepublicdb WHERE lsp_storeName = '${mrhstNm}'),
+		 (SELECT lsp_address_road FROM lackstorepublicdb WHERE lsp_storeName = '${mrhstNm}'),
+		 (SELECT lsp_address_jibun FROM lackstorepublicdb WHERE lsp_storeName = '${mrhstNm}'))
+	</insert>
+	
+
+</mapper>

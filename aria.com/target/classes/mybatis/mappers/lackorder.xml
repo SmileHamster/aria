@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.lackmenu">
+<!-- 리절트 맵 정의 -->	
+	<resultMap id="lackmenuResult3" type="MenuVO">
+		<result property="lm_id" column="lm_id" />
+		<result property="lm_menu" column="lm_menu" />
+		<result property="lm_menu_info" column="lm_menu_info" />
+		<result property="lm_price" column="lm_price" />
+		<result property="lm_creDate" column="lm_creDate" />
+		<result property="lm_fileName" column="lm_fileName" />
+		
+	</resultMap>
+	
+
+	
+	
+</mapper>
